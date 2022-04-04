@@ -1085,3 +1085,259 @@ Processing by ListsController#edit as HTML
 Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 4855)
 
 
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20220404024301)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "service_name" varchar NOT NULL, "byte_size" bigint NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "blob_id" integer NOT NULL, "variation_digest" varchar NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220404024301"]]
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 210.174.26.71 at 2022-04-04 02:53:53 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.4ms | Allocations: 350)
+Completed 200 OK in 29ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 2603)
+
+
+Started GET "/" for 210.174.26.71 at 2022-04-04 02:54:09 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 15.3ms | Allocations: 763)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 1569)
+
+
+Started GET "/lists" for 210.174.26.71 at 2022-04-04 02:54:22 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:3
+  Rendered lists/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 7412)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 7484)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms | Allocations: 10515)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `id' for #<ActionView::Base:0x007f55f8716420>
+Did you mean?  @@id):
+    4: 
+    5:   <p>タイトル</p>
+    6:   <span>
+    7:     <%= link_to list.title, list_path(list:id) %>
+    8:   </span>
+    9:   
+   10:   <p>画像</p>
+  
+app/views/lists/index.html.erb:7
+app/views/lists/index.html.erb:3
+Started GET "/lists" for 210.174.26.71 at 2022-04-04 02:56:03 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "List"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/lists/index.html.erb:11
+  Rendered lists/index.html.erb within layouts/application (Duration: 31.5ms | Allocations: 15132)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 15202)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.7ms | Allocations: 16427)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: undefined method `persisted?' for nil:NilClass):
+     8:   </span>
+     9: 
+    10:   <p>画像</p>
+    11:     <%= image_tag list.image, size: "200x200" %>
+    12: 
+    13: <% end %>
+  
+app/views/lists/index.html.erb:11
+app/views/lists/index.html.erb:3
+Started GET "/lists" for 210.174.26.71 at 2022-04-04 03:01:12 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1210)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1282)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2403)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>投稿一覧</h1>
+
+<% @lists.each do |list| %>
+
+  <p>タイトル</p>
+  <span>
+    <%= link_to list.title, list_path(list.id) %>
+  </span>
+
+  <p>画像</p>
+  <% if list.image.attached? %>
+    <%= image_tag list.image, size: "200x200" %>
+  <% else %>
+    <%= image_tag 'no_image', size: "200x200" %>
+  <% end 
+
+<% end %>
+
+):
+1:    <h1>投稿一覧</h1>
+2:    
+3:    <% @lists.each do |list| %>
+4:    
+5:      <p>タイトル</p>
+6:      <span>
+7:        <%= link_to list.title, list_path(list.id) %>
+8:      </span>
+9:    
+10:      <p>画像</p>
+11:      <% if list.image.attached? %>
+12:        <%= image_tag list.image, size: "200x200" %>
+13:      <% else %>
+14:        <%= image_tag 'no_image', size: "200x200" %>
+15:      <% end 
+16:    
+17:    <% end %>
+  
+app/views/lists/index.html.erb:17: syntax error, unexpected '<', expecting end
+app/views/lists/index.html.erb:17: syntax error, unexpected '<', expecting end
+app/views/lists/index.html.erb:17: syntax error, unexpected '<', expecting end
+app/views/lists/index.html.erb:17: syntax error, unexpected '<', expecting end
+app/views/lists/index.html.erb:17: syntax error, unexpected '<', expecting end
+app/views/lists/index.html.erb:17: syntax error, unexpected '<', expecting end
+Started GET "/lists" for 210.174.26.71 at 2022-04-04 03:01:29 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "List"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/lists/index.html.erb:11
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "List"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/lists/index.html.erb:11
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "List"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/lists/index.html.erb:11
+  Rendered lists/index.html.erb within layouts/application (Duration: 31.7ms | Allocations: 10689)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.9ms | Allocations: 14081)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.5ms | Allocations: 15233)
+
+
+Started GET "/lists/new" for 210.174.26.71 at 2022-04-04 03:07:51 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 5878)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 9009)
+Completed 200 OK in 17ms (Views: 15.7ms | Allocations: 10157)
+
+
+Started GET "/lists/new" for 210.174.26.71 at 2022-04-04 03:07:51 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 278)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3316)
+Completed 200 OK in 6ms (Views: 5.4ms | Allocations: 3711)
+
+
+Started POST "/lists" for 210.174.26.71 at 2022-04-04 03:08:39 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "list"=>{"title"=>"ActiveSrorageテスト", "body"=>"画像投稿機能の実装", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f55fc8ea9a0 @tempfile=#<Tempfile:/tmp/RackMultipart20220404-11696-1j61qkv.png>, @original_filename="142_refileDownloadImage.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"list[image]\"; filename=\"142_refileDownloadImage.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/lists_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mList Create (2.8ms)[0m  [1m[32mINSERT INTO "lists" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ActiveSrorageテスト"], ["body", "画像投稿機能の実装"], ["created_at", "2022-04-04 03:08:39.909468"], ["updated_at", "2022-04-04 03:08:39.909468"]]
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "List"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "List"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mActiveStorage::Blob Create (2.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["key", "ttbi5u82xejofio7dyt9khzlewxx"], ["filename", "142_refileDownloadImage.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 12302], ["checksum", "PBcUb2h4tdaiKpde00c2NQ=="], ["created_at", "2022-04-04 03:08:39.946264"]]
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mActiveStorage::Attachment Create (2.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "List"], ["record_id", 4], ["blob_id", 1], ["created_at", "2022-04-04 03:08:39.952370"]]
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mList Update (0.1ms)[0m  [1m[33mUPDATE "lists" SET "updated_at" = ? WHERE "lists"."id" = ?[0m  [["updated_at", "2022-04-04 03:08:39.958072"], ["id", 4]]
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+[36m  Disk Storage (1.0ms) [0m[32mUploaded file to key: ttbi5u82xejofio7dyt9khzlewxx (checksum: PBcUb2h4tdaiKpde00c2NQ==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: ce4c3e66-2a32-4e2b-8943-93e7922f6898) to Async(default) with arguments: #<GlobalID:0x00007f55f8f1d9e8 @uri=#<URI::GID gid://sample-app/ActiveStorage::Blob/1>>
+Redirected to https://9454313e60724930a8b2bd06d9c1d641.vfs.cloud9.us-east-1.amazonaws.com/lists/4
+Completed 302 Found in 118ms (ActiveRecord: 16.4ms | Allocations: 37131)
+
+
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ce4c3e66-2a32-4e2b-8943-93e7922f6898] Performing ActiveStorage::AnalyzeJob (Job ID: ce4c3e66-2a32-4e2b-8943-93e7922f6898) from Async(default) enqueued at 2022-04-04T03:08:39Z with arguments: #<GlobalID:0x00007f55f8f294f0 @uri=#<URI::GID gid://sample-app/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ce4c3e66-2a32-4e2b-8943-93e7922f6898] [36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: ttbi5u82xejofio7dyt9khzlewxx[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ce4c3e66-2a32-4e2b-8943-93e7922f6898] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ce4c3e66-2a32-4e2b-8943-93e7922f6898]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ce4c3e66-2a32-4e2b-8943-93e7922f6898]   [1m[36mActiveStorage::Blob Update (0.2ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ce4c3e66-2a32-4e2b-8943-93e7922f6898]   [1m[36mTRANSACTION (14.0ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ce4c3e66-2a32-4e2b-8943-93e7922f6898] Performed ActiveStorage::AnalyzeJob (Job ID: ce4c3e66-2a32-4e2b-8943-93e7922f6898) from Async(default) in 37.65ms
+Started GET "/lists/4" for 210.174.26.71 at 2022-04-04 03:08:40 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "List"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lists/show.html.erb:10
+  Rendered lists/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2535)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 5577)
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.4ms | Allocations: 6734)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b40fc5fae1874e59e56e0a0c96c32ad9e4b013bd/142_refileDownloadImage.png" for 210.174.26.71 at 2022-04-04 03:08:40 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b40fc5fae1874e59e56e0a0c96c32ad9e4b013bd", "filename"=>"142_refileDownloadImage"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: ttbi5u82xejofio7dyt9khzlewxx (https://9454313e60724930a8b2bd06d9c1d641.vfs.cloud9.us-east-1.amazonaws.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFJpYVRWMU9ESjRaV3B2Wm1sdk4yUjVkRGxyYUhwc1pYZDRlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFME1sOXlaV1pwYkdWRWIzZHViRzloWkVsdFlXZGxMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UUXlYM0psWm1sc1pVUnZkMjVzYjJGa1NXMWhaMlV1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA0LTA0VDAzOjEzOjQwLjQyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c65503d6bfe886ac7d3413c902d38909d6b6f5a2/142_refileDownloadImage.png)[0m
+Redirected to https://9454313e60724930a8b2bd06d9c1d641.vfs.cloud9.us-east-1.amazonaws.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFJpYVRWMU9ESjRaV3B2Wm1sdk4yUjVkRGxyYUhwc1pYZDRlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFME1sOXlaV1pwYkdWRWIzZHViRzloWkVsdFlXZGxMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UUXlYM0psWm1sc1pVUnZkMjVzYjJGa1NXMWhaMlV1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA0LTA0VDAzOjEzOjQwLjQyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c65503d6bfe886ac7d3413c902d38909d6b6f5a2/142_refileDownloadImage.png
+Completed 302 Found in 7ms (ActiveRecord: 0.1ms | Allocations: 1801)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFJpYVRWMU9ESjRaV3B2Wm1sdk4yUjVkRGxyYUhwc1pYZDRlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFME1sOXlaV1pwYkdWRWIzZHViRzloWkVsdFlXZGxMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UUXlYM0psWm1sc1pVUnZkMjVzYjJGa1NXMWhaMlV1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA0LTA0VDAzOjEzOjQwLjQyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c65503d6bfe886ac7d3413c902d38909d6b6f5a2/142_refileDownloadImage.png" for 210.174.26.71 at 2022-04-04 03:08:40 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"142_refileDownloadImage"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 332)
+
+

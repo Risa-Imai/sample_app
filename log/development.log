@@ -1463,3 +1463,304 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 333)
 
 
+Started GET "/" for 210.174.26.71 at 2022-04-04 06:00:41 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.6ms | Allocations: 350)
+Completed 200 OK in 16ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 2604)
+
+
+Started GET "/" for 210.174.26.71 at 2022-04-04 06:00:49 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.4ms | Allocations: 935)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 1928)
+
+
+Started GET "/new" for 210.174.26.71 at 2022-04-04 06:00:55 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/top" for 210.174.26.71 at 2022-04-04 06:33:46 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.6ms | Allocations: 232)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 6105)
+Completed 200 OK in 21ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 8822)
+
+
+Started GET "/lists" for 210.174.26.71 at 2022-04-04 06:33:55 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "List"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/lists/index.html.erb:11
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "List"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/lists/index.html.erb:11
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "List"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/lists/index.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lists/index.html.erb:12
+  Rendered lists/index.html.erb within layouts/application (Duration: 50.4ms | Allocations: 27308)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 54.6ms | Allocations: 30175)
+Completed 200 OK in 62ms (Views: 54.1ms | ActiveRecord: 1.8ms | Allocations: 32815)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b40fc5fae1874e59e56e0a0c96c32ad9e4b013bd/142_refileDownloadImage.png" for 210.174.26.71 at 2022-04-04 06:33:55 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b40fc5fae1874e59e56e0a0c96c32ad9e4b013bd", "filename"=>"142_refileDownloadImage"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (1.5ms) [0m[34mGenerated URL for file at key: ttbi5u82xejofio7dyt9khzlewxx (https://9454313e60724930a8b2bd06d9c1d641.vfs.cloud9.us-east-1.amazonaws.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFJpYVRWMU9ESjRaV3B2Wm1sdk4yUjVkRGxyYUhwc1pYZDRlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFME1sOXlaV1pwYkdWRWIzZHViRzloWkVsdFlXZGxMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UUXlYM0psWm1sc1pVUnZkMjVzYjJGa1NXMWhaMlV1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA0LTA0VDA2OjM4OjU1LjM4MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--311d2365f4dbca7a24ef1f028df965a9ac6899e8/142_refileDownloadImage.png)[0m
+Redirected to https://9454313e60724930a8b2bd06d9c1d641.vfs.cloud9.us-east-1.amazonaws.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFJpYVRWMU9ESjRaV3B2Wm1sdk4yUjVkRGxyYUhwc1pYZDRlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFME1sOXlaV1pwYkdWRWIzZHViRzloWkVsdFlXZGxMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UUXlYM0psWm1sc1pVUnZkMjVzYjJGa1NXMWhaMlV1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA0LTA0VDA2OjM4OjU1LjM4MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--311d2365f4dbca7a24ef1f028df965a9ac6899e8/142_refileDownloadImage.png
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 3009)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFJpYVRWMU9ESjRaV3B2Wm1sdk4yUjVkRGxyYUhwc1pYZDRlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFME1sOXlaV1pwYkdWRWIzZHViRzloWkVsdFlXZGxMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UUXlYM0psWm1sc1pVUnZkMjVzYjJGa1NXMWhaMlV1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA0LTA0VDA2OjM4OjU1LjM4MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--311d2365f4dbca7a24ef1f028df965a9ac6899e8/142_refileDownloadImage.png" for 210.174.26.71 at 2022-04-04 06:33:55 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"142_refileDownloadImage"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 333)
+
+
+Started GET "/lists/1" for 210.174.26.71 at 2022-04-04 06:34:05 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:20:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1199)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find List with 'id'=1):
+  
+app/controllers/lists_controller.rb:20:in `show'
+Started GET "/lshow" for 210.174.26.71 at 2022-04-04 06:34:31 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/lshow"):
+  
+Started GET "/" for 210.174.26.71 at 2022-04-04 06:50:00 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.4ms | Allocations: 350)
+Completed 200 OK in 31ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 2604)
+
+
+Started GET "/" for 210.174.26.71 at 2022-04-04 06:50:04 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.6ms | Allocations: 1241)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 2054)
+
+
+Started GET "/lists" for 210.174.26.71 at 2022-04-04 06:50:16 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.8ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "List"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/lists/index.html.erb:11
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "List"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/lists/index.html.erb:11
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "List"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/lists/index.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lists/index.html.erb:12
+  Rendered lists/index.html.erb within layouts/application (Duration: 67.6ms | Allocations: 29702)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 80.2ms | Allocations: 32999)
+Completed 200 OK in 87ms (Views: 77.4ms | ActiveRecord: 4.0ms | Allocations: 35847)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b40fc5fae1874e59e56e0a0c96c32ad9e4b013bd/142_refileDownloadImage.png" for 210.174.26.71 at 2022-04-04 06:50:16 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b40fc5fae1874e59e56e0a0c96c32ad9e4b013bd", "filename"=>"142_refileDownloadImage"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (5.7ms) [0m[34mGenerated URL for file at key: ttbi5u82xejofio7dyt9khzlewxx (https://9454313e60724930a8b2bd06d9c1d641.vfs.cloud9.us-east-1.amazonaws.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFJpYVRWMU9ESjRaV3B2Wm1sdk4yUjVkRGxyYUhwc1pYZDRlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFME1sOXlaV1pwYkdWRWIzZHViRzloWkVsdFlXZGxMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UUXlYM0psWm1sc1pVUnZkMjVzYjJGa1NXMWhaMlV1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA0LTA0VDA2OjU1OjE2Ljk5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3410e5847da912a6704410daf5e6dbda6c80e350/142_refileDownloadImage.png)[0m
+Redirected to https://9454313e60724930a8b2bd06d9c1d641.vfs.cloud9.us-east-1.amazonaws.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFJpYVRWMU9ESjRaV3B2Wm1sdk4yUjVkRGxyYUhwc1pYZDRlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFME1sOXlaV1pwYkdWRWIzZHViRzloWkVsdFlXZGxMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UUXlYM0psWm1sc1pVUnZkMjVzYjJGa1NXMWhaMlV1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA0LTA0VDA2OjU1OjE2Ljk5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3410e5847da912a6704410daf5e6dbda6c80e350/142_refileDownloadImage.png
+Completed 302 Found in 10ms (ActiveRecord: 0.1ms | Allocations: 3009)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFJpYVRWMU9ESjRaV3B2Wm1sdk4yUjVkRGxyYUhwc1pYZDRlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFME1sOXlaV1pwYkdWRWIzZHViRzloWkVsdFlXZGxMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UUXlYM0psWm1sc1pVUnZkMjVzYjJGa1NXMWhaMlV1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA0LTA0VDA2OjU1OjE2Ljk5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3410e5847da912a6704410daf5e6dbda6c80e350/142_refileDownloadImage.png" for 210.174.26.71 at 2022-04-04 06:50:17 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"142_refileDownloadImage"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 332)
+
+
+Started GET "/lists/new" for 210.174.26.71 at 2022-04-04 06:50:20 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 924)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3963)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 4498)
+
+
+Started GET "/lists/new" for 210.174.26.71 at 2022-04-04 06:50:21 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3316)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3710)
+
+
+Started GET "/lists/a" for 210.174.26.71 at 2022-04-04 06:50:31 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"a"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:20:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1207)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find List with 'id'=a):
+  
+app/controllers/lists_controller.rb:20:in `show'
+Started GET "/lists/1" for 210.174.26.71 at 2022-04-04 06:50:39 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:20:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1178)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find List with 'id'=1):
+  
+app/controllers/lists_controller.rb:20:in `show'
+Started GET "/show" for 210.174.26.71 at 2022-04-04 06:50:55 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/show"):
+  
+Started GET "/lists" for 210.174.26.71 at 2022-04-04 06:51:46 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "List"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/lists/index.html.erb:11
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "List"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/lists/index.html.erb:11
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "List"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/lists/index.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/lists/index.html.erb:12
+  Rendered lists/index.html.erb within layouts/application (Duration: 22.0ms | Allocations: 5719)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 8726)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.5ms | Allocations: 9190)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkSFJpYVRWMU9ESjRaV3B2Wm1sdk4yUjVkRGxyYUhwc1pYZDRlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWVdsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFME1sOXlaV1pwYkdWRWIzZHViRzloWkVsdFlXZGxMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UUXlYM0psWm1sc1pVUnZkMjVzYjJGa1NXMWhaMlV1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA0LTA0VDA2OjU1OjE2Ljk5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3410e5847da912a6704410daf5e6dbda6c80e350/142_refileDownloadImage.png" for 210.174.26.71 at 2022-04-04 06:51:46 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"142_refileDownloadImage"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/new" for 210.174.26.71 at 2022-04-04 06:52:26 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/lists/new" for 210.174.26.71 at 2022-04-04 06:53:11 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 313)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3350)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 3752)
+
+
+Started GET "/" for 210.174.26.71 at 2022-04-04 07:21:09 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.6ms | Allocations: 350)
+Completed 200 OK in 16ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 2603)
+
+
+Started GET "/" for 210.174.26.71 at 2022-04-04 07:21:11 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 15.4ms | Allocations: 764)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 1756)
+
+
+Started GET "/lists/new" for 210.174.26.71 at 2022-04-04 07:22:09 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 959)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 6768)
+Completed 200 OK in 19ms (Views: 11.7ms | ActiveRecord: 0.4ms | Allocations: 12527)
+
+
+Started GET "/lists/new" for 210.174.26.71 at 2022-04-04 07:22:10 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 280)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3319)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3721)
+
+
+Started POST "/lists" for 210.174.26.71 at 2022-04-04 07:22:17 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "list"=>{"title"=>"", "body"=>""}, "commit"=>"投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 3957)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 6924)
+Completed 200 OK in 17ms (Views: 8.2ms | ActiveRecord: 0.3ms | Allocations: 11999)
+
+

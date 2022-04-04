@@ -772,3 +772,316 @@ Processing by ListsController#show as HTML
 Completed 200 OK in 14ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 9009)
 
 
+Started GET "/" for 210.174.26.71 at 2022-04-04 01:45:38 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.5ms | Allocations: 350)
+Completed 200 OK in 16ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 2604)
+
+
+Started GET "/" for 210.174.26.71 at 2022-04-04 01:45:40 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.6ms | Allocations: 1154)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 2032)
+
+
+Started GET "/lists/1/edit" for 210.174.26.71 at 2022-04-04 01:45:59 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 827)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/lists_controller.rb:21:in `edit'
+Started GET "/lists/1/edit" for 210.174.26.71 at 2022-04-04 01:49:46 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/lists_controller.rb:21:in `edit'
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/edit.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1142)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1213)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.0ms | Allocations: 7837)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>編集画面</h1>
+
+<%= form_with model: @list do |f| %>
+
+  <h4>タイトル</h4>
+  <%= f.text_fiels :title %>
+  
+  <h4>本文</h4>
+  <%= f.text_area :body %>
+  
+  <%= f.submit '保存' %>
+  
+<% end
+
+):
+1:    <h1>編集画面</h1>
+2:    
+3:    <%= form_with model: @list do |f| %>
+4:    
+5:      <h4>タイトル</h4>
+6:      <%= f.text_fiels :title %>
+7:      
+8:      <h4>本文</h4>
+9:      <%= f.text_area :body %>
+10:      
+11:      <%= f.submit '保存' %>
+12:      
+13:    <% end
+  
+app/views/lists/edit.html.erb:16: syntax error, unexpected end-of-input, expecting end
+app/views/lists/edit.html.erb:16: syntax error, unexpected end-of-input, expecting end
+app/views/lists/edit.html.erb:16: syntax error, unexpected end-of-input, expecting end
+app/views/lists/edit.html.erb:16: syntax error, unexpected end-of-input, expecting end
+app/views/lists/edit.html.erb:16: syntax error, unexpected end-of-input, expecting end
+app/views/lists/edit.html.erb:16: syntax error, unexpected end-of-input, expecting end
+Started GET "/lists/1/edit" for 210.174.26.71 at 2022-04-04 01:49:47 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1145)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1216)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 2130)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>編集画面</h1>
+
+<%= form_with model: @list do |f| %>
+
+  <h4>タイトル</h4>
+  <%= f.text_fiels :title %>
+  
+  <h4>本文</h4>
+  <%= f.text_area :body %>
+  
+  <%= f.submit '保存' %>
+  
+<% end
+
+):
+1:    <h1>編集画面</h1>
+2:    
+3:    <%= form_with model: @list do |f| %>
+4:    
+5:      <h4>タイトル</h4>
+6:      <%= f.text_fiels :title %>
+7:      
+8:      <h4>本文</h4>
+9:      <%= f.text_area :body %>
+10:      
+11:      <%= f.submit '保存' %>
+12:      
+13:    <% end
+  
+app/views/lists/edit.html.erb:16: syntax error, unexpected end-of-input, expecting end
+app/views/lists/edit.html.erb:16: syntax error, unexpected end-of-input, expecting end
+app/views/lists/edit.html.erb:16: syntax error, unexpected end-of-input, expecting end
+app/views/lists/edit.html.erb:16: syntax error, unexpected end-of-input, expecting end
+app/views/lists/edit.html.erb:16: syntax error, unexpected end-of-input, expecting end
+app/views/lists/edit.html.erb:16: syntax error, unexpected end-of-input, expecting end
+Started GET "/lists/1/edit" for 210.174.26.71 at 2022-04-04 01:50:22 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/edit.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2076)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2146)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms | Allocations: 3802)
+
+
+  
+ActionView::Template::Error (undefined method `text_fields' for #<ActionView::Helpers::FormBuilder:0x00007f43009b2040>
+Did you mean?  text_field):
+    3: <%= form_with model: @list do |f| %>
+    4: 
+    5:   <h4>タイトル</h4>
+    6:   <%= f.text_fields :title %>
+    7: 
+    8:   <h4>本文</h4>
+    9:   <%= f.text_area :body %>
+  
+app/views/lists/edit.html.erb:6
+app/views/lists/edit.html.erb:3
+Started GET "/lists/1/edit" for 210.174.26.71 at 2022-04-04 01:50:39 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/edit.html.erb within layouts/application (Duration: 6.8ms | Allocations: 5687)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 11165)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.2ms | Allocations: 12838)
+
+
+Started GET "/" for 210.174.26.71 at 2022-04-04 02:01:51 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.6ms | Allocations: 350)
+Completed 200 OK in 18ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 2604)
+
+
+Started GET "/" for 210.174.26.71 at 2022-04-04 02:01:52 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-6.1.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.3ms | Allocations: 729)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 1430)
+
+
+Started GET "/lists/1/edit" for 210.174.26.71 at 2022-04-04 02:01:58 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/edit.html.erb within layouts/application (Duration: 2.0ms | Allocations: 783)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 6350)
+Completed 200 OK in 21ms (Views: 11.2ms | ActiveRecord: 0.7ms | Allocations: 12096)
+
+
+Started PATCH "/lists/1" for 210.174.26.71 at 2022-04-04 02:02:27 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "list"=>{"title"=>"test1", "body"=>"test1\r\n追記：編集機能を作りました！"}, "commit"=>"保存", "id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/lists_controller.rb:26:in `update'
+  [1m[36mList Update (0.3ms)[0m  [1m[33mUPDATE "lists" SET "body" = ?, "updated_at" = ? WHERE "lists"."id" = ?[0m  [["body", "test1\r\n追記：編集機能を作りました！"], ["updated_at", "2022-04-04 02:02:27.024317"], ["id", 1]]
+  ↳ app/controllers/lists_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/lists_controller.rb:26:in `update'
+Redirected to https://9454313e60724930a8b2bd06d9c1d641.vfs.cloud9.us-east-1.amazonaws.com/lists/1
+Completed 302 Found in 14ms (ActiveRecord: 3.9ms | Allocations: 5198)
+
+
+Started GET "/lists/1" for 210.174.26.71 at 2022-04-04 02:02:27 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3199)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 4269)
+
+
+Started GET "/lists/1" for 210.174.26.71 at 2022-04-04 02:02:49 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 41)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3075)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 3999)
+
+
+Started GET "/lists/1/edit" for 210.174.26.71 at 2022-04-04 02:03:05 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/edit.html.erb within layouts/application (Duration: 0.9ms | Allocations: 279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3312)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.2ms | Allocations: 4235)
+
+
+Started PATCH "/lists/1" for 210.174.26.71 at 2022-04-04 02:03:33 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "list"=>{"title"=>"test1", "body"=>"test1\r\n追記：編集機能を作りました！"}, "commit"=>"保存", "id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:25:in `update'
+Redirected to https://9454313e60724930a8b2bd06d9c1d641.vfs.cloud9.us-east-1.amazonaws.com/lists/1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 989)
+
+
+Started GET "/lists/1" for 210.174.26.71 at 2022-04-04 02:03:33 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 41)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3075)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 4000)
+
+
+Started GET "/lists/1" for 210.174.26.71 at 2022-04-04 02:06:02 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 365)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 5948)
+Completed 200 OK in 28ms (Views: 10.8ms | ActiveRecord: 0.5ms | Allocations: 13227)
+
+
+Started GET "/lists/1/edit" for 210.174.26.71 at 2022-04-04 02:06:24 +0000
+Cannot render console from 210.174.26.71! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lists_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 749)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3784)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 4855)
+
+
